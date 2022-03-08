@@ -1,7 +1,7 @@
 #! /bin/bash
 
 check() {
-    if pacman -Qs $1 > /dev/null ; then
+    if pacman -Qi $1 > /dev/null ; then
         echo "System has $1"
     else
         pacman -S $1 --noconfirm
